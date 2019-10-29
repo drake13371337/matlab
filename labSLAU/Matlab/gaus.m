@@ -16,9 +16,6 @@ function [x1, res] = gauss(matr, rankm, n)
     if(rankm == ranks && trg==0)
         for i=n:-1:1
             x(i) = matr(i, n+1);
-            disp("chek")
-            disp(x(i))
-            disp(i)
             for j=1:n
                 if(i~=j)
                     x(i)=x(i)-(matr(i, j)*x(j))
@@ -33,7 +30,6 @@ function [x1, res] = gauss(matr, rankm, n)
             end
         end
         trg=1
-        disp(x)
     end
     if(trg==0) 
         res="No solutions"
