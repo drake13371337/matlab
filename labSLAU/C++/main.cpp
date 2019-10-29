@@ -124,7 +124,6 @@ int main()
     }
     print_mtrx(su, n, 1);
     triangle(su, n, 1);
-    //print_mtrx(su, n, 1);
     triangle(tmp, n, 0);
 
     gauss(su, rank_matr(tmp, n, 0), n);
