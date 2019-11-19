@@ -38,7 +38,7 @@ double trapeze(double a, double b, double e){
     buff=0;
     while(true){
         h=(b-a)/n;
-        for(int i=1; i<n-1; i++)
+        for(int i=1; i<n; i++)
             res=res+func(a+h*i);
         res=(res*2+func(a)+func(b))*h/2;
         if(abs(buff-res)<=(e*3)){
@@ -59,7 +59,7 @@ double rectangle(double a, double b, double e){
     while(trg){
         h=(b-a)/n;
 
-        for(int i=0; i<n-1; i++)
+        for(int i=0; i<n; i++)
             res=res+func(a+h*i);
         res=res*h;
 
@@ -75,7 +75,7 @@ double rectangle(double a, double b, double e){
     while(trg){
         h=(b-a)/n;
 
-        for(int i=1; i<n; i++)
+        for(int i=1; i<n+1; i++)
             res=res+func(a+h*i);
         res=res*h;
 
@@ -91,7 +91,7 @@ double rectangle(double a, double b, double e){
     while(trg){
         h=(b-a)/n;
 
-        for(int i=1; i<n-1; i++)
+        for(int i=1; i<n; i++)
             res=res+func(a+h*i);
         res=(res+(func(a)+func(b))/2)*h;
 
@@ -115,10 +115,10 @@ double simpson(double a, double b, double e){
     while(true){
         h=(b-a)/n/2;
 
-        for(int i=1; i<n; i++)
+        for(int i=1; i<n+1; i++)
             res=res+func(a+h*(2*i-1));
         res=res*4;
-        for(int i=1; i<n-1; i++)
+        for(int i=1; i<n; i++)
             res1=res1+func(a+h*2*i);
         res1=res1*2;
         res=res+res1;
