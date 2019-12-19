@@ -7,11 +7,11 @@ function simpson(a, b, e)
     while true
         h=(b-a)/n/2;
 
-        for i=1:n-1
+        for i=1:n
             res=res+func(a+h*(2*i-1));
         end
         res=res*4;
-        for i=1:n-2
+        for i=1:n-1
             res1=res1+func(a+h*2*i);
         end
         res1=res1*2;
@@ -30,4 +30,3 @@ function simpson(a, b, e)
         n=n+2;
     end
 end
-

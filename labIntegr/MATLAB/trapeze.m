@@ -4,7 +4,7 @@ function trapeze(a, b, e)
     buff=0;
     while 1
         h=(b-a)/n;
-        for i=1:(n-2)
+        for i=1:(n-1)
             res=res+func(a+h*i);
         end
         res=(res*2+func(a)+func(b))*h/2;

@@ -6,7 +6,7 @@ function rectangle(a, b, e)
     while trg
         h=(b-a)/n;
 
-        for i=0:n-2
+        for i=0:n-1
             res=res+func(a+h*i);
         end
 
@@ -27,7 +27,7 @@ function rectangle(a, b, e)
     while trg
         h=(b-a)/n;
 
-        for i=1:n-1
+        for i=1:n
             res=res+func(a+h*i);
         end
 
@@ -48,7 +48,7 @@ function rectangle(a, b, e)
     while trg
         h=(b-a)/n;
 
-        for i=1:n-2
+        for i=1:n-1
             res=res+func(a+h*i);
         end
 
@@ -66,4 +66,3 @@ function rectangle(a, b, e)
         res=0;
     end
 end
-
