@@ -64,7 +64,7 @@ int main()
 {
     double **A;
     double *F;
-    double *X, *X1;
+    double *X;
 
     string buff;
     int n=0;
