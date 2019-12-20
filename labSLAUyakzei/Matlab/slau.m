@@ -18,6 +18,6 @@ s1 = sprintf("Jacobi(eps=%f):", e);
 disp(s1);
 resy = jacobi(A, F, n, e);
 
-s2 = sprintf("Gauss-Zeidel(eps==%f):", e);
+s2 = sprintf("Gauss-Zeidel(eps=%f):", e);
 disp(s2);
 resz = gz(A, F, n, e);
